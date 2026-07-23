@@ -1,7 +1,6 @@
 "use server";
 
-import { googleModel } from "@/lib/ai";
-import { generateText, streamText } from "ai";
+import { googleModel, generateText, streamText } from "@/ai";
 
 export async function generateComponentDescription(componentName: string) {
   const { text } = await generateText({

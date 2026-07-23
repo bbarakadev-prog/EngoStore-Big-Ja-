@@ -51,6 +51,8 @@ export function Navbar() {
               EngStore
             </span>
           </Link>
+          <div className="flex items-center gap-4">
+          </div>
 
           <nav className="flex items-center">
               {navItems.map((item) => {

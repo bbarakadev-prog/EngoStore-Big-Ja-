@@ -30,7 +30,8 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, Plus } from "lucide-react"
+import { CreateProjectDialog } from "@/components/projects/create-project-dialog"
 
 export type FilterType = 'all' | 'category' | 'manufacturer' | 'distributor';
 
@@ -249,6 +250,19 @@ export function CatalogSidebar({ activeFilter, onFilterChange, data }: CatalogSi
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup className="mt-auto border-t pt-4 pb-6">
+          <SidebarGroupContent>
+            <CreateProjectDialog 
+              trigger={
+                <SidebarMenuButton className="w-full justify-start gap-2 text-primary hover:text-primary">
+                  <Plus className="size-4" />
+                  <span>Create Project</span>
+                </SidebarMenuButton>
+              }
+            />
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
